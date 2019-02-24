@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<h1>联系人列表</h1>
+<ul>
+    {% for user in user_list.MemberList %}
+        <li><img style="height: 50px;width: 50px" src="/get_img?prev={{user.HeadImgUrl}}">
+        <span>用户名：{{user.NickName}} 唯一标识：{{user.UserName}} 备注：{{user.RemarkName}}</span>
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
